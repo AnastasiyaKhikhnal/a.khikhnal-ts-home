@@ -1,0 +1,20 @@
+{
+  "name": "a.khikhnal-ts-home",
+  "version": "1.0.0",
+  "description": "Home tasks",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiyaKhikhnal/a.khikhnal-ts-home.git"
+  },
+  "keywords": [],
+  "author": "Anastasiya Khikhnal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnastasiyaKhikhnal/a.khikhnal-ts-home/issues"
+  },
+  "homepage": "https://github.com/AnastasiyaKhikhnal/a.khikhnal-ts-home#readme"
+}
