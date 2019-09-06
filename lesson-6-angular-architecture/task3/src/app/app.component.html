@@ -1,0 +1,4 @@
+<button (click)="hideText()">Показать детали</button>
+<p [ngClass]="{hidden: visible}" >Привет</p>
+<span *ngFor="let item of array" [ngClass]="{color: item.counter > 4}"
+   [ngStyle]="{ backgroundColor: (item.counter > 4 ? 'blue' : 'none')}">Количество нажатий: {{item.counter}}</span>
