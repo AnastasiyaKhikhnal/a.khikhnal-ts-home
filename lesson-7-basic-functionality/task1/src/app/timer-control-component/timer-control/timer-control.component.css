@@ -1,0 +1,21 @@
+.wrapper-timer {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black
+  
+}
+
+.button {
+  padding: 1em 2em;
+  margin: 1em;
+  font-size: 1em;
+  text-align: center;
+}
+
+.button-start {
+color: red;
+}
+
+.button-stop {
+color: black;
+}
