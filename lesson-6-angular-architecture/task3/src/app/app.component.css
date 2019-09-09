@@ -1,0 +1,11 @@
+.hidden {
+  display: none;
+}
+
+.color {
+  color: white;
+}
+
+span {
+  display: block;
+}
