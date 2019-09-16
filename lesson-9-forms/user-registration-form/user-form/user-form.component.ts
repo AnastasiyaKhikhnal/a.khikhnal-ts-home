@@ -1,6 +1,6 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { UserService } from '../user.service';
-import { User } from '../models/user';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {UserService} from '../user.service';
+import {User} from '../models/user';
 
 @Component({
   selector: 'app-user-form',
@@ -17,16 +17,16 @@ export class UserFormComponent implements OnInit {
   @Output()
   data: EventEmitter<User> = new EventEmitter<User>();
 
-  submitForm (user: User, isValid: boolean) {
+  submitForm(user: User, isValid: boolean) {
     if (isValid)
       this.data.emit(user);
   }
-  
+
   ngOnInit() {
     this.user = this.userService.getUser();
   }
 
-   nameUserSuggest() {
-    this.user.userName = "Mike"; 
+  nameUserSuggest() {
+    this.user.userName = 'Mike';
   }
 }

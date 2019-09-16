@@ -3,12 +3,12 @@ div {
 }
 
 button, textarea, .secret {
- margin: 1.25em 0 0; 
- outline:none;
+  margin: 1.25em 0 0;
+  outline: none;
 }
 
 .error {
-color: red;
+  color: red;
 }
 
 fieldset, textarea {
