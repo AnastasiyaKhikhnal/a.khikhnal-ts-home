@@ -1,0 +1,77 @@
+<form #form="ngForm" (ngSubmit)="submitForm(form.value, form.valid)" novalidate>
+  <fieldset>
+    <legend>User Data</legend>
+    <div ngModelGroup="userData" #userData="ngModelGroup">
+      <div>User Name
+        <input type="text"
+               name="userName"
+               required
+               #userName="ngModel"
+               [ngModel]="user?.userName">
+        <div *ngIf="userName.errors?.required && userName.touched" class='error'>This field is required</div>
+        <div>
+          <button (click)="nameUserSuggest()">Suggest name</button>
+        </div>
+        <div>Email
+          <input type="email"
+                 name="email"
+                 required
+                 #email="ngModel"
+                 [ngModel]="user?.email">
+          <div *ngIf="email.errors?.required && email.touched" class='error'>This field is required</div>
+        </div>
+      </div>
+      <div *ngIf="userData.invalid && userData.touched" class="error">
+        The form is not filled correctly!
+      </div>
+    </div>
+  </fieldset>
+  <div class="secret">Secret question
+    <select name="secret"
+            [ngModel]="user?.secret">
+      <option *ngFor="let item of user?.secret"
+              [selected]="user?.secret[0]">
+        {{ item }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <textarea [ngModel]="user?.questionAnswer"
+              name="questionAnswer"
+              cols="40"
+              rows="5"
+              required
+              #questionAnswer="ngModel">
+    </textarea>
+    <div *ngIf="questionAnswer.invalid && questionAnswer.touched" class="error">
+      You didn't answer the question!
+    </div>
+  </div>
+  <div>
+    Your reply: {{form.value.questionAnswer}}
+  </div>
+  <div>
+    <input type="radio"
+           name="gender"
+           value="male"
+           required
+           [ngModel]="user?.gender">
+    Male
+  </div>
+  <div>
+    <input type="radio"
+           name="gender"
+           value="female"
+           required
+           [ngModel]="user?.gender">
+    Female
+  </div>
+  <div>
+    <button type="submit"
+            name="submit"
+            [disabled]="!form.valid">
+      Submit
+    </button>
+  </div>
+  {{form.value | json}}
+</form>

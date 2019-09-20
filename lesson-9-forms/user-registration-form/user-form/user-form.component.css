@@ -1,0 +1,32 @@
+div {
+  margin: 0 0 1.25em;
+}
+
+button, textarea, .secret {
+  margin: 1.25em 0 0;
+  outline: none;
+}
+
+.error {
+  color: red;
+}
+
+fieldset, textarea {
+  border-radius: 10px;
+}
+
+textarea {
+  padding: 1.25em;
+}
+
+button {
+  padding: 0.3em;
+  width: 10em;
+  background-color: #00fff2;
+  border-color: #00fff2;
+  border-radius: 5px;
+}
+
+form {
+  margin: 10px;
+}
